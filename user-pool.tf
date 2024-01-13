@@ -3,6 +3,7 @@ resource "aws_cognito_user_pool" "default" {
 
   mfa_configuration          = var.mfa_enabled == true ? "ON" : "OFF"
   sms_authentication_message = var.sms_authentication_message
+  auto_verified_attributes = var.auto_verified_attributes
 
   dynamic "sms_configuration" {
     for_each = var.mfa_enabled == true ? [1] : []
