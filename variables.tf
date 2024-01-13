@@ -31,11 +31,6 @@ variable "user_pool_domain_enabled" {
   default = false
 }
 
-variable "prevent_destroy" {
-  type = bool
-  description = "prevent destroy of pool"
-  default = true
-}
 
 variable "clients" {
   type = list(object({

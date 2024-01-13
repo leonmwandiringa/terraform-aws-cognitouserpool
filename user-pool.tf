@@ -57,7 +57,7 @@ resource "aws_cognito_user_pool" "default" {
   }
 
   lifecycle {
-    prevent_destroy = var.prevent_destroy
+    prevent_destroy = true
   }
   
   tags = var.global_tags
