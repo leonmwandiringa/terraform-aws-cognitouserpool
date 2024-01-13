@@ -14,6 +14,12 @@ variable "alias_attributes" {
   default = []
 }
 
+variable "username_attributes" {
+  type = list(string)
+  default = []
+  description = "username attributes"
+}
+
 variable "sms_authentication_message" {
   type = string
   description = "sms_authentication_message"
