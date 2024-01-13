@@ -31,6 +31,11 @@ variable "user_pool_domain_enabled" {
   default = false
 }
 
+variable "auto_verified_attributes" {
+  type = list(string)
+  default = []
+  description = "auto verified"
+}
 
 variable "clients" {
   type = list(object({
