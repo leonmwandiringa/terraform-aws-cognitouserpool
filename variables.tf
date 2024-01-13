@@ -11,12 +11,12 @@ variable "mfa_enabled" {
 variable "alias_attributes" {
   type = list(string)
   description = "aliases" 
-  default = []
+  default = null
 }
 
 variable "username_attributes" {
   type = list(string)
-  default = []
+  default = null
   description = "username attributes"
 }
 
