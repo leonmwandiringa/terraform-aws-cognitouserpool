@@ -11,5 +11,4 @@ resource "aws_cognito_user_pool_client" "default" {
   explicit_auth_flows = var.clients[count.index]["explicit_auth_flows"]
   prevent_user_existence_errors = var.clients[count.index]["prevent_user_existence_errors"]
   enable_token_revocation = var.clients[count.index]["enable_token_revocation"]
-  depends_on = [ aws_cognito_identity_provider.default ]
 }
