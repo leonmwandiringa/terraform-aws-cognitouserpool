@@ -11,6 +11,7 @@ variable "mfa_enabled" {
 variable "alias_attributes" {
   type = list(string)
   description = "aliases" 
+  default = []
 }
 
 variable "sms_authentication_message" {
