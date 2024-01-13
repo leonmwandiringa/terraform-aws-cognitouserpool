@@ -50,7 +50,7 @@ resource "aws_cognito_user_pool" "default" {
   }
 
   dynamic "software_token_mfa_configuration" {
-    for_each = var.mfa_enabled ? 1 : 0
+    for_each = var.mfa_enabled ? [1] : []
     content {
       enabled = var.mfa_enabled
     }  
