@@ -44,6 +44,12 @@ variable "auto_verified_attributes" {
   description = "auto verified"
 }
 
+variable "attributes_require_verification_before_update" {
+  type = list(string)
+  default = []
+  description = "attributes required before update"
+}
+
 variable "clients" {
   type = list(object({
     name = string

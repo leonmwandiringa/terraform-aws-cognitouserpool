@@ -5,6 +5,7 @@ resource "aws_cognito_user_pool" "default" {
   sms_authentication_message = var.sms_authentication_message
   auto_verified_attributes = var.auto_verified_attributes
   username_attributes = var.username_attributes
+  
 
   dynamic "sms_configuration" {
     for_each = var.mfa_enabled == true ? [1] : []
@@ -30,6 +31,10 @@ resource "aws_cognito_user_pool" "default" {
             max_length = schema.value.max_length
         }
       }
+  }
+
+  user_attribute_update_settings {
+    attributes_require_verification_before_update = var.attributes_require_verification_before_update
   }
 
   password_policy {
