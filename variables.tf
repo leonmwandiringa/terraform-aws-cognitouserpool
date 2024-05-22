@@ -8,6 +8,12 @@ variable "mfa_enabled" {
   description = "cognito bool"
 }
 
+variable "user_groups" {
+  type = list(string)
+  default = []
+  description = "cognito user groups"
+}
+
 variable "alias_attributes" {
   type = list(string)
   description = "aliases" 
